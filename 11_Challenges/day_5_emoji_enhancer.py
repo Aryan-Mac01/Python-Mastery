@@ -23,3 +23,4 @@ for word in message.split():
 
 updated_message = " ".join(updated_words)
 print("\n Enhanced message: \n")
+print(updated_message)
