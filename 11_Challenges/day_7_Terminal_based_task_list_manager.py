@@ -37,7 +37,7 @@ def task_manager():
         print("4. Delete Task")
         print("5. Exit")
 
-        choice = input("Choose an option (1-5)").strip()
+        choice = input("Choose an option (1-5) ").strip()
 
         match choice:
             case "1":
@@ -53,7 +53,7 @@ def task_manager():
             case "3":
                 display_tasks(tasks)
                 try:
-                    num = int(input("Enter task number"))
+                    num = int(input("Enter task number "))
                     if 1<= num <= len(tasks):
                         tasks[num-1]["done"] = True
                         save_tasks(tasks)
@@ -66,7 +66,7 @@ def task_manager():
             case "4":
                 display_tasks(tasks)
                 try:
-                    num = int(input("Enter task number to delete"))
+                    num = int(input("Enter task number to delete "))
                     if 1<= num <= len(tasks):
                         removed = tasks.pop(num-1)
                         save_tasks(tasks)
@@ -82,3 +82,5 @@ def task_manager():
             
             case _:
                 print("Please choose a valid option")
+
+task_manager()
